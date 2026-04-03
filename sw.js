@@ -1,4 +1,4 @@
-const CACHE_NAME = "cell-society-v1";
+const CACHE_NAME = "cell-society-v2";
 
 const urlsToCache = [
   "./",
