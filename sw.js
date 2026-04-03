@@ -1,4 +1,4 @@
-const CACHE_NAME = "cell-society-v2";
+const CACHE_NAME = "cell-society-v1";
 
 const urlsToCache = [
   "./",
@@ -8,7 +8,9 @@ const urlsToCache = [
   "./icon-512.png"
 ];
 
+// Install
 self.addEventListener("install", (event) => {
+  self.skipWaiting(); // activate immediately
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(urlsToCache);
@@ -16,24 +18,29 @@ self.addEventListener("install", (event) => {
   );
 });
 
+// Activate
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((names) =>
-      Promise.all(
+    caches.keys().then((names) => {
+      return Promise.all(
         names.map((name) => {
           if (name !== CACHE_NAME) {
             return caches.delete(name);
           }
         })
-      )
-    )
+      );
+    })
   );
+  self.clients.claim(); // take control immediately
 });
 
+// Fetch
 self.addEventListener("fetch", (event) => {
+  if (event.request.method !== "GET") return;
+
   event.respondWith(
     caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
+      return response || fetch(event.request).catch(() => caches.match("./index.html"));
     })
   );
 });
