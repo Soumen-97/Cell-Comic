@@ -1,0 +1,22 @@
+{
+  "name": "The Cell Society",
+  "short_name": "Cell Comic",
+  "description": "Interactive biology comic to learn cell biology",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#05050f",
+  "theme_color": "#3344dd",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
