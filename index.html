@@ -202,12 +202,12 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 
 /* narrative caption */
 .ncap{
-  position:absolute;bottom:8px;left:8px;right:8px;z-index:5;
+  position:absolute;top:8px;left:8px;right:8px;z-index:5;
   background:rgba(0,0,0,.75);border:1.5px solid rgba(255,255,255,.15);border-radius:6px;
   padding:5px 10px;font-size:11px;font-weight:700;color:#cce;font-style:italic;
   letter-spacing:.2px;
 }
-.ncap.top{bottom:auto;top:8px}
+.ncap.bot{top:auto;bottom:8px}
 .ncap.purple{border-color:#8844ff44;color:#ccaaff}
 .ncap.orange{border-color:#ff880044;color:#ffccaa}
 .ncap.green{border-color:#44ff8844;color:#aaffcc}
@@ -998,8 +998,15 @@ grid:'pg-1',
 panels:[{cls:'pnl-purple drama',isQuiz:true,scene:'',dlg:''}],
 sci:null,les:null},
 
-// ─────────────── PAGE 13 — FINAL ───────────────
-{title:'ISSUE #14 — FINAL ISSUE: THE SOCIETY',ch:'Chapter 14: The Society Lesson',
+
+// ─────────────── PAGE 14 — PROTEIN TRANSLATION AR ───────────────
+{title:'ISSUE #14 — BUILD YOUR OWN PROTEIN! 🧪',ch:'Chapter 14: Protein Translation AR Lab',
+grid:'pg-1',
+panels:[{cls:'pnl-purple drama',isProtein:true,scene:'',dlg:''}],
+sci:null,les:null},
+
+// ─────────────── PAGE 15 — FINAL ───────────────
+{title:'ISSUE #15 — FINAL ISSUE: THE SOCIETY',ch:'Chapter 15: The Society Lesson',
 grid:'pg-1',
 panels:[{cls:'',isFinal:true,scene:'',dlg:''}],
 sci:null,les:null},
@@ -1129,6 +1136,137 @@ function renderPage(idx){
       </div>`;
     const qw=document.getElementById('qstars');
     if(qw){for(let i=0;i<35;i++){const s=document.createElement('div');s.className='cstar';const sz=Math.random()*3+1;s.style.cssText=`width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${1+Math.random()*3}s;animation-delay:${Math.random()*3}s;position:absolute;border-radius:50%`;qw.appendChild(s)}}
+    document.getElementById('glos').style.display='none';
+    return;
+  }
+
+
+  // ── PROTEIN TRANSLATION AR PAGE ──
+  if(pg.panels[0] && pg.panels[0].isProtein){
+    document.getElementById('pageArea').innerHTML=`
+      <div class="cpage">
+        <div class="page-header">
+          <div class="page-ch">${pg.ch}</div>
+          <div class="page-title">${pg.title}</div>
+        </div>
+        <div class="final-pg" style="position:relative;padding:44px 24px 40px">
+          <div class="final-stars-wrap" id="ptstars"></div>
+
+          <!-- Animated protein chain icons -->
+          <div style="display:flex;justify-content:center;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:24px">
+            ${['#ff6b9d','#4ecdc4','#45b7d1','#96ceb4','#ffd93d','#dda0dd','#98d8c8','#f7dc6f','#82e0aa','#f0b27a','#aed6f1','#f1948a'].map((col,i)=>`
+              <div style="width:38px;height:38px;border-radius:50%;
+                background:${col};border:2px solid rgba(255,255,255,.25);
+                display:flex;align-items:center;justify-content:center;
+                font-size:10px;font-weight:900;color:rgba(0,0,0,.7);
+                box-shadow:0 0 14px ${col}88;
+                animation:cFloat ${2.5+i*.15}s ease-in-out infinite;
+                animation-delay:${i*.12}s">
+                ${['Met','Gly','Ser','Gln','Lys','Phe','Pro','Thr','Ala','Tyr','Ile','Arg'][i]}
+              </div>`).join('')}
+            <div style="width:38px;height:38px;border-radius:50%;
+              background:#e74c3c;border:2px solid rgba(255,255,255,.25);
+              display:flex;align-items:center;justify-content:center;
+              font-size:10px;font-weight:900;color:#fff;
+              box-shadow:0 0 14px #e74c3c88;
+              animation:cFloat 4.3s ease-in-out infinite;animation-delay:1.8s">STOP</div>
+          </div>
+
+          <!-- Title -->
+          <div style="font-family:'Bangers',cursive;font-size:clamp(24px,4.5vw,48px);
+            letter-spacing:4px;color:#ff6b9d;margin-bottom:8px;
+            text-shadow:0 0 28px #ff6b9d88;animation:tFloat 3.5s ease-in-out infinite">
+            🧬 PROTEIN TRANSLATION AR LAB
+          </div>
+          <div style="font-family:'Bangers',cursive;font-size:clamp(14px,2.5vw,22px);
+            letter-spacing:2px;color:#ffd93d;margin-bottom:20px;
+            text-shadow:0 0 14px #ffd93d55">
+            Draw mRNA · Slide the Ribosome · Watch Proteins Grow
+          </div>
+
+          <!-- Quote -->
+          <div style="
+            background:rgba(255,255,255,.04);border:1.5px solid rgba(255,107,157,.3);
+            border-radius:12px;padding:14px 20px;margin:0 auto 24px;max-width:600px;
+            font-style:italic;font-size:14px;color:rgba(255,220,240,.85);line-height:1.8;
+          ">
+            "Translation is not just chemistry — it is the moment where genetic information<br>
+            becomes <strong style="color:#ffd93d">physical reality</strong>.
+            Every protein in your body was once just four letters on a strand of mRNA."
+            <div style="font-size:11px;color:rgba(255,150,180,.4);margin-top:8px;font-style:normal;font-weight:700">
+              — The Cell Society, PhD Societal Research Project
+            </div>
+          </div>
+
+          <!-- Feature cards -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            gap:10px;margin:0 auto 26px;max-width:660px">
+            ${[
+              {icon:'✍️',title:'Draw mRNA',desc:'Trace your mRNA strand in the air with your index finger'},
+              {icon:'🤏',title:'Grab Ribosome',desc:'Pinch with thumb + index to pick up and place the ribosome'},
+              {icon:'➡️',title:'Slide 5\'→3\'',desc:'Push the ribosome along the strand — one codon at a time'},
+              {icon:'🎉',title:'Watch Protein Grow',desc:'12 amino acids + STOP codon → full polypeptide chain!'},
+            ].map(f=>`
+              <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,107,157,.15);
+                border-radius:12px;padding:12px 10px;text-align:center;">
+                <div style="font-size:26px;margin-bottom:6px">${f.icon}</div>
+                <div style="font-size:11px;font-weight:900;color:#ff6b9d;margin-bottom:4px">${f.title}</div>
+                <div style="font-size:10px;color:rgba(255,200,220,.55);line-height:1.4">${f.desc}</div>
+              </div>`).join('')}
+          </div>
+
+          <!-- mRNA sequence display -->
+          <div style="background:rgba(255,255,255,.04);border:1px solid rgba(92,248,255,.2);
+            border-radius:10px;padding:10px 16px;margin:0 auto 22px;max-width:600px">
+            <div style="font-size:10px;color:rgba(92,248,255,.5);font-weight:900;letter-spacing:2px;margin-bottom:6px;text-transform:uppercase">mRNA Sequence in this Lab</div>
+            <div style="font-family:monospace;font-size:12px;letter-spacing:2px;line-height:1.8;word-break:break-all">
+              ${'AUG GGU UCU CAG AAA UUU CCU ACU GCU UAU AUU CGU UAA'.split(' ').map((cod,i)=>{
+                const cols=['#ff6b9d','#4ecdc4','#45b7d1','#96ceb4','#ffd93d','#dda0dd','#98d8c8','#f7dc6f','#82e0aa','#f0b27a','#aed6f1','#f1948a','#e74c3c'];
+                return `<span style="color:${cols[i]};background:${cols[i]}22;padding:1px 4px;border-radius:3px;margin:1px">${cod}</span>`;
+              }).join(' ')}
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="https://soumen-97.github.io/Protein-Translation-AR/"
+             target="_blank" rel="noopener noreferrer"
+             style="display:inline-block;text-decoration:none">
+            <button style="
+              font-family:'Bangers',cursive;letter-spacing:3px;font-size:clamp(16px,2.8vw,24px);
+              background:linear-gradient(135deg,#cc2266,#ff6b9d);
+              border:2.5px solid rgba(255,107,157,.5);
+              color:#fff;padding:16px 40px;border-radius:50px;
+              cursor:pointer;
+              box-shadow:0 0 36px rgba(255,107,157,.5),0 0 70px rgba(255,107,157,.15);
+              animation:bPulse 2.5s ease-in-out infinite;
+            "
+            onmouseover="this.style.transform='scale(1.06)'"
+            onmouseout="this.style.transform='scale(1)'">
+              🧪 LAUNCH PROTEIN TRANSLATION LAB ↗
+            </button>
+          </a>
+
+          <div style="font-size:11px;color:rgba(255,255,255,.2);margin-top:12px;letter-spacing:.5px">
+            Opens in a new tab &nbsp;·&nbsp; Allow camera permission &nbsp;·&nbsp; Chrome / Edge recommended
+          </div>
+
+          <!-- Science note -->
+          <div style="background:linear-gradient(135deg,#06112a,#0c1e3e);border:1px solid rgba(92,248,255,.2);
+            border-left:3px solid #4488ff;border-radius:8px;padding:12px 16px;
+            margin:20px auto 0;max-width:600px;text-align:left">
+            <div style="font-family:'Bangers',cursive;font-size:16px;letter-spacing:1.5px;color:#4488ff;margin-bottom:6px">🔬 What You Will Learn</div>
+            <div style="font-size:12px;color:#8aaabb;line-height:1.7">
+              ① <strong style="color:#5cf8ff">Transcription</strong> → mRNA is a copy of DNA sent from nucleus to ribosome<br>
+              ② <strong style="color:#ffd93d">Codons</strong> → every 3 nucleotides code for 1 amino acid (AUG = START)<br>
+              ③ <strong style="color:#ff6b9d">Translation</strong> → ribosome reads mRNA and builds the polypeptide chain<br>
+              ④ <strong style="color:#e74c3c">STOP codon</strong> → UAA signals chain release; ribosome dissociates<br>
+              ⑤ <strong style="color:#82e0aa">Protein folding</strong> → chain folds into functional 3D structure
+            </div>
+          </div>
+        </div>
+      </div>`;
+    const pw=document.getElementById('ptstars');
+    if(pw){for(let i=0;i<35;i++){const s=document.createElement('div');s.className='cstar';const sz=Math.random()*3+1;s.style.cssText=`width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--d:${1+Math.random()*3}s;animation-delay:${Math.random()*3}s;position:absolute;border-radius:50%`;pw.appendChild(s)}}
     document.getElementById('glos').style.display='none';
     return;
   }
