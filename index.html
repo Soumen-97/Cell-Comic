@@ -202,12 +202,12 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 
 /* narrative caption */
 .ncap{
-  position:absolute;top:8px;left:8px;right:8px;z-index:5;
+  position:absolute;bottom:8px;left:8px;right:8px;z-index:5;
   background:rgba(0,0,0,.75);border:1.5px solid rgba(255,255,255,.15);border-radius:6px;
   padding:5px 10px;font-size:11px;font-weight:700;color:#cce;font-style:italic;
   letter-spacing:.2px;
 }
-.ncap.bot{top:auto;bottom:8px}
+.ncap.top{bottom:auto;top:8px}
 .ncap.purple{border-color:#8844ff44;color:#ccaaff}
 .ncap.orange{border-color:#ff880044;color:#ffccaa}
 .ncap.green{border-color:#44ff8844;color:#aaffcc}
@@ -483,7 +483,7 @@ sci:'A cell is the basic unit of ALL life. It contains specialised structures ca
 les:null},
 
 // ─────────────── PAGE 2 ───────────────
-{title:'ISSUE #2 — THE POWERHOUSE SAGA',ch:'Chapter 2: Mitochondria',
+{title:'ISSUE #2 — THE POWERHOUSE SAGA',ch:'Chapter 2: Energy & Mitochondria',
 grid:'pg-big-l',
 panels:[
   {cls:'pnl-orange drama span2',scene:`
@@ -517,7 +517,7 @@ sci:'MITOCHONDRIA perform aerobic respiration in 3 stages: ① Glycolysis (cytop
 les:null},
 
 // ─────────────── PAGE 3 ───────────────
-{title:'ISSUE #3 — THE WORLD\'S STRICTEST BOUNCER',ch:'Chapter 1: Cell Membrane',
+{title:'ISSUE #3 — THE WORLD\'S STRICTEST BOUNCER',ch:'Chapter 3: The Cell Membrane',
 grid:'pg-1',
 panels:[
   {cls:'pnl-blue drama',convo:true,scene:`
@@ -547,7 +547,7 @@ sci:'The CELL MEMBRANE is a phospholipid bilayer ~7nm thick. It is selectively p
 les:null},
 
 // ─────────────── PAGE 4 ───────────────
-{title:'ISSUE #4 — RIBOSOME\'S PROTEIN MASTERCLASS',ch:'Chapter 3: Protein Synthesis',
+{title:'ISSUE #4 — RIBOSOME\'S PROTEIN MASTERCLASS',ch:'Chapter 4: Protein Synthesis',
 grid:'pg-big-r',
 panels:[
   {cls:'pnl-green',scene:`
@@ -681,7 +681,7 @@ sci:'TRANSLATION (DNA→RNA→Protein): ① mRNA arrives from nucleus. ② Ribos
 les:null},
 
 // ─────────────── PAGE 5 (NEW — ER) ───────────────
-{title:'ISSUE #5 — THE UNSUNG HERO: ENDOPLASMIC RETICULUM',ch:'Chapter 3: The ER — Rough & Smooth',
+{title:'ISSUE #5 — THE UNSUNG HERO: ENDOPLASMIC RETICULUM',ch:'Chapter 5: Endoplasmic Reticulum',
 grid:'pg-big-l',
 panels:[
   {cls:'pnl-blue drama span2',convo:true,scene:`
@@ -732,7 +732,7 @@ sci:'ROUGH ER: Membrane network studded with ribosomes. Newly synthesised protei
 les:null},
 
 // ─────────────── PAGE 6 ───────────────
-{title:'ISSUE #6 — THE FUSSIEST POST OFFICE ON EARTH',ch:'Chapter 3: Golgi Apparatus',
+{title:'ISSUE #6 — THE FUSSIEST POST OFFICE ON EARTH',ch:'Chapter 6: Golgi Apparatus',
 grid:'pg-1',
 panels:[
   {cls:'pnl-gold drama',convo:true,scene:`
@@ -764,7 +764,7 @@ sci:'The GOLGI APPARATUS has 3–8 flattened membrane sacs (cisternae). cis face
 les:null},
 
 // ─────────────── PAGE 6 ───────────────
-{title:'ISSUE #7 — THE RECYCLER\'S MONOLOGUE',ch:'Chapter 3: Lysosome',
+{title:'ISSUE #7 — THE RECYCLER\'S MONOLOGUE',ch:'Chapter 7: The Lysosome',
 grid:'pg-2',
 panels:[
   {cls:'pnl-red drama',scene:`
@@ -796,7 +796,7 @@ sci:'LYSOSOMES contain ~60 hydrolytic enzymes in an acidic environment (pH ~5) m
 les:null},
 
 // ─────────────── PAGE 13 ───────────────
-{title:'ISSUE #8 — THE GREAT DNA DEBATE',ch:'Chapter 2: Gene Expression',
+{title:'ISSUE #8 — THE GREAT DNA DEBATE',ch:'Chapter 8: Gene Expression',
 grid:'pg-1',
 panels:[
   {cls:'pnl-purple drama',convo:true,scene:`
@@ -830,7 +830,7 @@ sci:'THE CENTRAL DOGMA: DNA → (Transcription) → mRNA → (Translation) → P
 les:null},
 
 // ─────────────── PAGE 13 ───────────────
-{title:'ISSUE #9 — THE PLANT CELL PRIVILEGE DEBATE',ch:'Chapter 4: Plant vs Animal Cells',
+{title:'ISSUE #9 — THE PLANT CELL PRIVILEGE DEBATE',ch:'Chapter 9: Plant vs Animal Cells',
 grid:'pg-big-l',
 panels:[
   {cls:'pnl-green drama span2',scene:`
@@ -864,7 +864,7 @@ sci:'ANIMAL CELLS have: centrioles, flexible shape, small/many vacuoles, no cell
 les:null},
 
 // ─────────────── PAGE 13 ───────────────
-{title:'ISSUE #10 — THE GREAT ATP SHORTAGE',ch:'Chapter 2: The Energy Crisis',
+{title:'ISSUE #10 — THE GREAT ATP SHORTAGE',ch:'Chapter 10: The Energy Crisis',
 grid:'pg-1',
 panels:[
   {cls:'pnl-red drama',convo:true,scene:`
@@ -898,7 +898,7 @@ sci:'ATP (Adenosine Triphosphate) is the universal energy currency. Every cell p
 les:'The cell teaches us something profound: when resources are scarce, cooperation — not competition — is what keeps the system alive. Every role matters. Every organelle is indispensable. This is true of cells, and equally true of human societies.'},
 
 // ─────────────── PAGE 13 ───────────────
-{title:'ISSUE #11 — APOPTOSIS: THE NOBLE FAREWELL',ch:'Chapter 5: Programmed Cell Death',
+{title:'ISSUE #11 — APOPTOSIS: THE NOBLE FAREWELL',ch:'Chapter 11: Programmed Cell Death',
 grid:'pg-big-r',
 panels:[
   {cls:'pnl-blue',scene:`
@@ -958,7 +958,7 @@ sci:'APOPTOSIS vs NECROSIS: Apoptosis = controlled, programmed — triggered by 
 les:'Lesson: Apoptosis is one of the most selfless acts in biology. A cell sacrifices itself — cleanly, quietly — so the organism it belongs to can survive. 50–70 billion such acts happen in your body every single day.'},
 
 // ─────────────── PAGE 13 ───────────────
-{title:'ISSUE #12 — THE BIG REVISION SPECIAL',ch:'Chapter 6: Exam Ready!',
+{title:'ISSUE #12 — THE BIG REVISION SPECIAL',ch:'Chapter 12: Exam Ready!',
 grid:'pg-big-l',
 panels:[
   {cls:'pnl-purple',scene:`
@@ -993,13 +993,13 @@ sci:null,les:null},
 
 
 // ─────────────── ISSUE 14 — QUIZ / EXPLORER ───────────────
-{title:'ISSUE #13 — EXPLORE THE CELL UNIVERSE!',ch:'Chapter 7: Beyond the Comic',
+{title:'ISSUE #13 — EXPLORE THE CELL UNIVERSE!',ch:'Chapter 13: Explore & Discover',
 grid:'pg-1',
 panels:[{cls:'pnl-purple drama',isQuiz:true,scene:'',dlg:''}],
 sci:null,les:null},
 
 // ─────────────── PAGE 13 — FINAL ───────────────
-{title:'ISSUE #14 — FINAL ISSUE: THE SOCIETY',ch:'Chapter 6: The Society Lesson',
+{title:'ISSUE #14 — FINAL ISSUE: THE SOCIETY',ch:'Chapter 14: The Society Lesson',
 grid:'pg-1',
 panels:[{cls:'',isFinal:true,scene:'',dlg:''}],
 sci:null,les:null},
