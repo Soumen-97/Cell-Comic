@@ -3,7 +3,7 @@
 <head>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3344dd">
-
+ 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>The Cell Society — Comic Book</title>
@@ -14,7 +14,7 @@
 body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hidden}
 #bgc{position:fixed;inset:0;z-index:0;pointer-events:none}
 .wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:12px 10px 40px}
-
+ 
 /* ══════════ COVER ══════════ */
 .cover{
   position:relative;overflow:hidden;border-radius:18px;
@@ -55,7 +55,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .cast-name{font-size:8px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.6)}
 .cover-quote{font-style:italic;color:#7799ee;font-size:15px;margin-top:10px}
 .cover-hint{font-size:11px;color:#445566;margin-top:8px;letter-spacing:.5px}
-
+ 
 /* ══════════ NAV ══════════ */
 .nav{
   display:flex;align-items:center;gap:10px;
@@ -77,7 +77,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .nav-sub{font-size:11px;color:#556688;margin-top:1px;font-weight:700}
 .prog{width:100%;height:4px;background:rgba(255,255,255,.1);border-radius:2px;margin-top:5px;overflow:hidden}
 .prog-fill{height:100%;background:linear-gradient(90deg,#3344dd,#aa22cc,#ffcc44);border-radius:2px;transition:width .4s}
-
+ 
 /* ══════════ COMIC PAGE ══════════ */
 .cpage{
   border-radius:16px;overflow:hidden;margin-bottom:14px;
@@ -86,14 +86,14 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   animation:pgIn .45s cubic-bezier(.22,1,.36,1) both;
 }
 @keyframes pgIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
-
+ 
 .page-header{
   background:rgba(0,0,0,.6);border-bottom:2px solid rgba(255,255,255,.08);
   padding:10px 20px;text-align:center;
 }
 .page-ch{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:900}
 .page-title{font-family:'Bangers',cursive;font-size:clamp(20px,3.5vw,30px);letter-spacing:2px;margin-top:2px}
-
+ 
 /* ── Comic grid ── */
 .pgrid{display:grid;gap:2px;background:#111}
 .pg-2{grid-template-columns:1fr 1fr}
@@ -102,7 +102,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .pg-big-r{grid-template-columns:2fr 3fr}
 .pg-1{grid-template-columns:1fr}
 .pg-3-bot{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
-
+ 
 /* ══════════ PANEL ══════════ */
 .panel{
   display:flex;flex-direction:column;
@@ -111,7 +111,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 }
 .span2{grid-column:span 2}
 .span3{grid-column:span 3}
-
+ 
 /* Per-panel colour themes */
 .pnl-purple{background:radial-gradient(ellipse at 35% 30%,#1e0a44 0%,#0d0520 60%,#050210 100%)}
 .pnl-orange{background:radial-gradient(ellipse at 65% 25%,#2e1000 0%,#170800 55%,#080300 100%)}
@@ -121,26 +121,26 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .pnl-teal{background:radial-gradient(ellipse at 50% 50%,#042020 0%,#021010 55%,#010808 100%)}
 .pnl-gold{background:radial-gradient(ellipse at 60% 30%,#201400 0%,#100a00 55%,#050300 100%)}
 .pnl-pink{background:radial-gradient(ellipse at 45% 35%,#2a0820 0%,#150410 55%,#080208 100%)}
-
+ 
 /* Halftone overlay on panels */
 .panel::before{
   content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
   background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);
   background-size:7px 7px;
 }
-
+ 
 /* Speed lines (dramatic bg) */
 .panel.drama::after{
   content:'';position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.06;
   background:repeating-conic-gradient(from 0deg at 50% 110%,#fff 0deg 1deg,transparent 1deg 5deg);
 }
-
+ 
 /* ══════════ SCENE (visual area) ══════════ */
 .scene{
   position:relative;flex:1;min-height:160px;z-index:1;
   overflow:hidden;
 }
-
+ 
 /* floating character */
 .ch{
   position:absolute;display:flex;flex-direction:column;align-items:center;gap:5px;
@@ -149,7 +149,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   z-index:2;
 }
 @keyframes chFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-
+ 
 .ch-body{
   width:var(--cw,68px);height:var(--ch2,68px);border-radius:50%;
   display:flex;align-items:center;justify-content:center;
@@ -161,13 +161,13 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   position:relative;
 }
 @keyframes chPulse{0%,100%{box-shadow:0 0 16px var(--gl,#4466ff44)}50%{box-shadow:0 0 32px var(--gl,#4466ff88),0 0 50px var(--gl,#4466ff22)}}
-
+ 
 .ch-label{
   font-size:9px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;
   background:rgba(0,0,0,.55);color:#fff;padding:2px 8px;border-radius:20px;
   border:1px solid rgba(255,255,255,.15);white-space:nowrap;
 }
-
+ 
 /* floating particles */
 .pt{
   position:absolute;border-radius:50%;pointer-events:none;
@@ -175,11 +175,11 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   animation-delay:var(--pdd,0s);
 }
 @keyframes ptFloat{0%{transform:translate(0,0)}33%{transform:translate(10px,-18px)}66%{transform:translate(-8px,-8px)}100%{transform:translate(0,0)}}
-
+ 
 /* scene stars */
 .ss{position:absolute;border-radius:50%;background:#fff;animation:ssT var(--sd,2s) ease-in-out infinite;animation-delay:var(--sdd,0s)}
 @keyframes ssT{0%,100%{opacity:.05;transform:scale(1)}50%{opacity:.9;transform:scale(1.8)}}
-
+ 
 /* ATP coins */
 .atp{
   position:absolute;width:32px;height:32px;border-radius:50%;
@@ -190,7 +190,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   animation:atpF var(--af,2.8s) ease-in-out infinite;animation-delay:var(--afd,0s);
 }
 @keyframes atpF{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(18deg)}}
-
+ 
 /* lightning */
 .zap{
   position:absolute;width:14px;height:48px;
@@ -199,20 +199,20 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   animation:zapF 1.4s ease-in-out infinite;animation-delay:var(--zapdel,0s);
 }
 @keyframes zapF{0%,100%{opacity:.3;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.1)}}
-
+ 
 /* narrative caption */
 .ncap{
-  position:absolute;top:8px;left:8px;right:8px;z-index:5;
+  position:absolute;bottom:8px;left:8px;right:8px;z-index:5;
   background:rgba(0,0,0,.75);border:1.5px solid rgba(255,255,255,.15);border-radius:6px;
   padding:5px 10px;font-size:11px;font-weight:700;color:#cce;font-style:italic;
   letter-spacing:.2px;
 }
-.ncap.bot{top:auto;bottom:8px}
+.ncap.top{bottom:auto;top:8px}
 .ncap.purple{border-color:#8844ff44;color:#ccaaff}
 .ncap.orange{border-color:#ff880044;color:#ffccaa}
 .ncap.green{border-color:#44ff8844;color:#aaffcc}
 .ncap.red{border-color:#ff444444;color:#ffaaaa}
-
+ 
 /* SFX action word */
 .sfx{
   position:absolute;z-index:6;
@@ -224,7 +224,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   pointer-events:none;
 }
 @keyframes sfxPop{from{transform:rotate(var(--sfxr,-6deg)) scale(0)}to{transform:rotate(var(--sfxr,-6deg)) scale(1)}}
-
+ 
 /* ══════════ DIALOGUE (BELOW SCENE) ══════════ */
 .dialogue{
   position:relative;z-index:2;
@@ -233,20 +233,20 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   padding:10px 10px 8px;
   display:flex;flex-direction:column;gap:7px;
 }
-
+ 
 /* single full-width bubble */
 .db{
   display:flex;align-items:flex-start;gap:7px;
 }
 .db.right{flex-direction:row-reverse}
-
+ 
 .db-avatar{
   flex-shrink:0;width:34px;height:34px;border-radius:50%;
   border:2px solid rgba(255,255,255,.2);
   display:flex;align-items:center;justify-content:center;
   font-size:16px;box-shadow:0 0 10px var(--dgl,#4466ff44);
 }
-
+ 
 .db-bubble{
   background:#fff;color:#1a1a2e;border-radius:12px;
   padding:7px 11px;font-size:12px;font-weight:700;line-height:1.45;
@@ -258,7 +258,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;
   opacity:.55;margin-bottom:2px;display:block;
 }
-
+ 
 /* Colour variants */
 .db-bubble.purple{background:linear-gradient(135deg,#f0e8ff,#e8d8ff);border-color:#9944cc33}
 .db-bubble.orange{background:linear-gradient(135deg,#fff4e0,#ffe8cc);border-color:#cc660033}
@@ -268,13 +268,13 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .db-bubble.yellow{background:linear-gradient(135deg,#fffce0,#fff8cc);border-color:#aa880033}
 .db-bubble.pink{background:linear-gradient(135deg,#ffe4f4,#ffd4ec);border-color:#cc228844}
 .db-bubble.teal{background:linear-gradient(135deg,#e0fffa,#ccfff6);border-color:#007766aa}
-
+ 
 /* thought bubble */
 .db-bubble.thought{
   background:linear-gradient(135deg,#f4f0ff,#ede8ff);
   border-style:dashed;border-color:#8844ff44;font-style:italic;
 }
-
+ 
 /* ══════════ SCIENCE BOX ══════════ */
 .scibox{
   margin:0;background:linear-gradient(135deg,#06112a,#0c1e3e);
@@ -290,7 +290,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   background:rgba(68,136,255,.15);border:1px solid #4488ff44;border-radius:6px;
   font-size:12px;color:#88bbff;font-family:monospace;
 }
-
+ 
 /* lesson box */
 .lesbox{
   margin:0;background:linear-gradient(135deg,#031408,#071f0e);
@@ -298,7 +298,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 }
 .lesbox-title{font-family:'Bangers',cursive;font-size:17px;letter-spacing:1.5px;color:#44cc66;margin-bottom:5px}
 .lesbox-text{font-size:12px;color:#7aaa88;line-height:1.6}
-
+ 
 /* ══════════ WIDE CONVERSATION (full-width strip) ══════════ */
 .convo-strip{
   background:rgba(0,0,0,.5);
@@ -321,7 +321,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .cs-bub.blue{background:linear-gradient(135deg,#e4f0ff,#d4eaff)}
 .cs-bub.red{background:linear-gradient(135deg,#ffe8e8,#ffd8d8)}
 .cs-bub.yellow{background:linear-gradient(135deg,#fffce0,#fff8cc)}
-
+ 
 /* ══════════ Q&A STRIP ══════════ */
 .qa-strip{background:rgba(0,0,0,.5);border-top:2px solid rgba(255,255,255,.08);padding:10px 12px;display:flex;flex-direction:column;gap:7px}
 .qa-pair{display:flex;flex-direction:column;gap:4px}
@@ -333,7 +333,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .qa-q::before{content:'Q';position:absolute;right:-18px;top:6px;font-family:'Bangers',cursive;font-size:18px;color:#cc8800}
 .qa-a{background:linear-gradient(135deg,#e8ffe8,#ccffdd);border:1.5px solid #22880044;margin-left:20px}
 .qa-a::before{content:'A';position:absolute;left:-18px;top:6px;font-family:'Bangers',cursive;font-size:18px;color:#228800}
-
+ 
 /* ══════════ FINAL ══════════ */
 .final-pg{
   background:radial-gradient(ellipse at 50% 40%,#1a0840 0%,#0a0420 55%,#030110 100%);
@@ -348,7 +348,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .final-icons{font-size:30px;letter-spacing:5px;margin:12px 0;animation:tFloat 5s ease-in-out infinite reverse}
 .final-note{border:2px solid #ffcc4444;border-radius:10px;padding:12px 18px;background:rgba(255,204,68,.05);margin-top:18px;font-size:13px;color:#ccbb88;line-height:1.6}
 .final-note strong{font-family:'Bangers',cursive;font-size:17px;letter-spacing:1px;color:#ffcc44;display:block;margin-bottom:4px}
-
+ 
 /* ══════════ GLOSSARY ══════════ */
 .glossary{
   background:linear-gradient(135deg,#0a0d22,#121828);border-radius:14px;
@@ -360,7 +360,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 .g-item:hover{background:rgba(255,255,255,.09)}
 .g-term{font-weight:900;font-size:11.5px;color:#77aaff;margin-bottom:2px;text-transform:uppercase;letter-spacing:.3px}
 .g-def{font-size:11px;color:#6677aa;line-height:1.45}
-
+ 
 @media(max-width:580px){
   .pg-2,.pg-big-l,.pg-big-r{grid-template-columns:1fr}
   .pg-3{grid-template-columns:1fr 1fr}
@@ -372,7 +372,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
 <body>
 <canvas id="bgc"></canvas>
 <div class="wrap">
-
+ 
 <!-- ════════ COVER ════════ -->
 <div class="cover">
   <div class="cover-halftone"></div>
@@ -396,7 +396,7 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   <div class="cover-quote">"Every cell is a city. Every organelle, a citizen."</div>
   <div class="cover-hint">← → Arrow keys to flip pages &nbsp;|&nbsp; Swipe on mobile</div>
 </div>
-
+ 
 <!-- NAV -->
 <div class="nav">
   <button class="nbtn" id="prevBtn" onclick="go(-1)" disabled>◀ PREV</button>
@@ -407,14 +407,14 @@ body{background:#05050f;font-family:'Nunito',sans-serif;color:#fff;overflow-x:hi
   </div>
   <button class="nbtn" id="nextBtn" onclick="go(1)">NEXT ▶</button>
 </div>
-
+ 
 <!-- PAGE AREA -->
 <div id="pageArea"></div>
 <div class="glossary" id="glos" style="display:none">
   <div class="glos-title">📚 Cell Biology Glossary</div>
   <div class="g-grid" id="ggrid"></div>
 </div>
-
+ 
 </div><!-- /wrap -->
 <script>
 // ═══════════ HELPERS ═══════════════════════════════
@@ -449,10 +449,10 @@ function csline(emoji,bg,glow,name,text,color='',right=false){
     <div class="cs-bub ${color}"><span class="who">${name}</span>${text}</div>
   </div>`;
 }
-
+ 
 // ═══════════ PAGE DATA ═════════════════════════════
 const PAGES=[
-
+ 
 // ─────────────── PAGE 1 ───────────────
 {title:'ISSUE #1 — WHO RUNS THIS CELL?',ch:'Chapter 1: The Cell Society',
 grid:'pg-2',
@@ -467,7 +467,7 @@ panels:[
   dlg:`
     ${db('🧠','linear-gradient(135deg,#6644cc,#4422aa)','#8855ff55','Nucleus','I am the NUCLEUS — the Mayor of Cell City! Every decision in this cell goes through me!','purple')}
     ${db('⚡','linear-gradient(135deg,#cc6600,#884400)','#ff880055','Mitochondria','Cute. Who keeps the LIGHTS ON though? That\'s me. Without my ATP, you can\'t even make that speech.','orange',true)}`},
-
+ 
   {cls:'pnl-orange drama',scene:`
     ${ss('10%','10%','3px','2.5s','.2s')}${ss('85%','15%','4px','3s','.8s')}${ss('40%','80%','2px','2.2s','1.3s')}
     ${pt('70%','20%','9px','#ff880033','4.5s','.5s')}${pt('20%','55%','7px','#ffaa0033','3.5s','1s')}
@@ -481,7 +481,7 @@ panels:[
 ],
 sci:'A cell is the basic unit of ALL life. It contains specialised structures called ORGANELLES — each one a specialist doing a critical job, 24 hours a day, 7 days a week, without a single day off. Every organelle needs every other one.',
 les:null},
-
+ 
 // ─────────────── PAGE 2 ───────────────
 {title:'ISSUE #2 — THE POWERHOUSE SAGA',ch:'Chapter 2: Energy & Mitochondria',
 grid:'pg-big-l',
@@ -502,7 +502,7 @@ panels:[
     ${db('⚡','linear-gradient(135deg,#cc6600,#884400)','#ff880066','Mitochondria','A MEME?! I produce 36 to 38 ATP from a single glucose molecule using THREE complex biochemical stages. I have my own DNA. I was once a FREE-LIVING BACTERIUM. I am not a meme.','orange',true)}
     ${db('👧','linear-gradient(135deg,#cc8866,#aa6644)','#ffcc8844','Student','...So it IS true though?','yellow')}
     ${db('⚡','linear-gradient(135deg,#cc6600,#884400)','#ff880066','Mitochondria','Devastatingly, embarrassingly, yes. Without me, you\'re dead in 3 seconds.','orange',true)}`},
-
+ 
   {cls:'pnl-orange',scene:`
     ${ss('15%','15%','3px','2.3s','.3s')}${ss('80%','25%','4px','2.8s','.9s')}
     ${pt('30%','60%','8px','#ff880033','4s','0s')}
@@ -515,7 +515,7 @@ panels:[
 ],
 sci:'MITOCHONDRIA perform aerobic respiration in 3 stages: ① Glycolysis (cytoplasm): Glucose → 2 pyruvate + 2 ATP. ② Krebs Cycle (matrix): Pyruvate → CO₂ + electrons. ③ Electron Transport Chain (cristae): electrons → 34 ATP. Total: 36–38 ATP per glucose molecule.',
 les:null},
-
+ 
 // ─────────────── PAGE 3 ───────────────
 {title:'ISSUE #3 — THE WORLD\'S STRICTEST BOUNCER',ch:'Chapter 3: The Cell Membrane',
 grid:'pg-1',
@@ -545,7 +545,7 @@ panels:[
 ],
 sci:'The CELL MEMBRANE is a phospholipid bilayer ~7nm thick. It is selectively permeable — water crosses freely, glucose needs GLUT transporters, ions use protein channels, large molecules require vesicles. Membrane proteins act as receptors, channels, enzymes, and identity markers.',
 les:null},
-
+ 
 // ─────────────── PAGE 4 ───────────────
 {title:'ISSUE #4 — RIBOSOME\'S PROTEIN MASTERCLASS',ch:'Chapter 4: Protein Synthesis',
 grid:'pg-big-r',
@@ -562,22 +562,22 @@ panels:[
     ${db('🏭','linear-gradient(135deg,#226644,#114422)','#44ff8844','Ribosome','I read the mRNA strand codon by codon. Every 3 letters = 1 amino acid. AUG means START. I call up tRNA molecules to bring me the matching amino acids and I stitch them together into a protein chain!','green')}
     ${db('👦','linear-gradient(135deg,#aa7755,#886644)','#ffcc8844','Student','What\'s tRNA?','yellow',true)}
     ${db('🏭','linear-gradient(135deg,#226644,#114422)','#44ff8844','Ribosome','The delivery driver! It reads the codon, fetches the matching amino acid, and hands it to me. Like Uber Eats but for molecular biology.','green')}`},
-
+ 
   // ── right-column panel: protein synthesis visual ──
   {cls:'pnl-green',scene:`
     ${ss('8%','6%','3px','2.6s','0s')}${ss('88%','10%','4px','3.2s','.5s')}${ss('48%','84%','2px','2.4s','1.1s')}
     ${pt('15%','42%','8px','#44ff8833','4.5s','0s')}${pt('82%','38%','6px','#22ff6622','3.5s','.7s')}
-
+ 
     <!-- Title -->
     <div style="position:absolute;top:6%;left:50%;transform:translateX(-50%);
       font-family:'Bangers',cursive;font-size:16px;letter-spacing:2px;
       color:#44ff88;text-shadow:0 0 10px #44ff8866;white-space:nowrap">
       HOW TRANSLATION WORKS
     </div>
-
+ 
     <!-- Step-by-step visual flow -->
     <div style="position:absolute;top:18%;left:6%;right:6%;display:flex;flex-direction:column;gap:7px">
-
+ 
       <!-- Step 1 -->
       <div style="display:flex;align-items:center;gap:8px;
         animation:chFloat 2.8s ease-in-out infinite;animation-delay:0s">
@@ -591,7 +591,7 @@ panels:[
           <div style="font-size:9.5px;color:rgba(180,255,200,.7);line-height:1.3">Nucleus sends mRNA copy through nuclear pores to the ribosome</div>
         </div>
       </div>
-
+ 
       <!-- Step 2 -->
       <div style="display:flex;align-items:center;gap:8px;
         animation:chFloat 3s ease-in-out infinite;animation-delay:.15s">
@@ -605,7 +605,7 @@ panels:[
           <div style="font-size:9.5px;color:rgba(180,255,200,.7);line-height:1.3">Every 3 bases = 1 codon = 1 amino acid. AUG is the START signal</div>
         </div>
       </div>
-
+ 
       <!-- Step 3 -->
       <div style="display:flex;align-items:center;gap:8px;
         animation:chFloat 2.6s ease-in-out infinite;animation-delay:.3s">
@@ -619,7 +619,7 @@ panels:[
           <div style="font-size:9.5px;color:rgba(180,255,200,.7);line-height:1.3">tRNA anticodon matches mRNA codon → drops off its amino acid</div>
         </div>
       </div>
-
+ 
       <!-- Step 4 -->
       <div style="display:flex;align-items:center;gap:8px;
         animation:chFloat 3.2s ease-in-out infinite;animation-delay:.45s">
@@ -633,7 +633,7 @@ panels:[
           <div style="font-size:9.5px;color:rgba(180,255,200,.7);line-height:1.3">Ribosome links amino acids together. The polypeptide chain grows</div>
         </div>
       </div>
-
+ 
       <!-- Step 5 -->
       <div style="display:flex;align-items:center;gap:8px;
         animation:chFloat 2.9s ease-in-out infinite;animation-delay:.6s">
@@ -648,7 +648,7 @@ panels:[
         </div>
       </div>
     </div>
-
+ 
     <!-- Growing chain visual at bottom -->
     <div style="position:absolute;bottom:7%;left:50%;transform:translateX(-50%);
       display:flex;align-items:center;gap:3px">
@@ -659,10 +659,10 @@ panels:[
           animation-delay:${i*.1}s"></div>`).join('')}
       <div style="font-size:11px;color:rgba(68,255,136,.7);font-weight:900;margin-left:4px">→ PROTEIN!</div>
     </div>
-
+ 
     ${ncap('The Translation Machine — step by step')}`,
   dlg:''}, 
-
+ 
   {cls:'pnl-green drama span2',qa:true,scene:`
     ${ss('6%','8%','3px','2.5s','.2s')}${ss('88%','12%','4px','3s','.7s')}${ss('50%','82%','2px','2.2s','1.4s')}${ss('30%','75%','3px','2.7s','.9s')}
     ${pt('15%','35%','8px','#44ff8833','4s','0s')}${pt('80%','50%','6px','#44ff6622','3s','.8s')}
@@ -679,7 +679,7 @@ panels:[
 ],
 sci:'TRANSLATION (DNA→RNA→Protein): ① mRNA arrives from nucleus. ② Ribosome binds at 5\' end. ③ tRNA brings amino acids matching each codon. ④ Peptide bonds form between amino acids. ⑤ Chain grows until STOP codon → protein released. Rough ER ribosomes make secretory proteins; free ribosomes make cytoplasmic proteins.',
 les:null},
-
+ 
 // ─────────────── PAGE 5 (NEW — ER) ───────────────
 {title:'ISSUE #5 — THE UNSUNG HERO: ENDOPLASMIC RETICULUM',ch:'Chapter 5: Endoplasmic Reticulum',
 grid:'pg-big-l',
@@ -715,7 +715,7 @@ panels:[
     {e:'🧬',bg:'linear-gradient(135deg,#4488aa,#226688)',glow:'#44aabb44',name:'New Protein',text:'So you\'re like... the quality control department AND the lipid factory?',c:'blue',r:true},
     {e:'🏗️',bg:'linear-gradient(135deg,#224488,#112266)',glow:'#4488ff66',name:'Rough ER',text:'And the transport hub. Once I\'m done with you, I package you into a transport vesicle and ship you to the Golgi for further processing. Think of me as the factory floor between the Ribosome and the Post Office.',c:'blue',r:false},
   ]},
-
+ 
   {cls:'pnl-teal',scene:`
     ${ss('8%','8%','3px','2.5s','.2s')}${ss('84%','14%','4px','3s','.7s')}${ss('50%','80%','2px','2.3s','1.3s')}
     ${pt('25%','52%','8px','#44ccbb33','4.5s','0s')}${pt('75%','40%','6px','#22aabb22','3.5s','.8s')}
@@ -730,7 +730,7 @@ panels:[
 ],
 sci:'ROUGH ER: Membrane network studded with ribosomes. Newly synthesised proteins enter the lumen, are folded by chaperone proteins, and transported to Golgi via vesicles. Makes all secretory, membrane, and lysosomal proteins. SMOOTH ER: No ribosomes. Functions: ① Lipid & steroid synthesis. ② Drug & toxin detoxification (especially in liver cells). ③ Calcium ion storage (especially in muscle cells — triggers contraction). Together, ER is the largest organelle system in most cells.',
 les:null},
-
+ 
 // ─────────────── PAGE 6 ───────────────
 {title:'ISSUE #6 — THE FUSSIEST POST OFFICE ON EARTH',ch:'Chapter 6: Golgi Apparatus',
 grid:'pg-1',
@@ -762,7 +762,7 @@ panels:[
 ],
 sci:'The GOLGI APPARATUS has 3–8 flattened membrane sacs (cisternae). cis face = RECEIVES proteins from ER. trans face = SHIPS proteins out. Jobs: ① Glycosylation (adding sugars). ② Phosphorylation. ③ Sorting proteins into the correct vesicles. ④ Making lysosomes.',
 les:null},
-
+ 
 // ─────────────── PAGE 6 ───────────────
 {title:'ISSUE #7 — THE RECYCLER\'S MONOLOGUE',ch:'Chapter 7: The Lysosome',
 grid:'pg-2',
@@ -779,7 +779,7 @@ panels:[
     ${db('🧠','linear-gradient(135deg,#554455,#332233)','#88448844','Nucleus','Best Performance: ME, for governing all cell activities!')}
     ${db('⚡','linear-gradient(135deg,#554433,#332211)','#88664444','Mitochondria','Best Supporting Role: ME, for keeping the cell alive!','orange',true)}
     ${db('♻️','linear-gradient(135deg,#993300,#771100)','#ff663355','Lysosome','And the award for "Most Ignored Organelle Who Prevents You From Drowning in Your Own Toxic Waste" goes to... nobody. Because nobody made that category.','red')}`},
-
+ 
   {cls:'pnl-red',scene:`
     ${ss('15%','10%','3px','2.5s','.2s')}${ss('80%','20%','4px','3s','.9s')}${ss('50%','78%','2px','2.2s','1.4s')}
     ${pt('35%','60%','8px','#ff444433','4s','0s')}
@@ -794,7 +794,7 @@ panels:[
 ],
 sci:'LYSOSOMES contain ~60 hydrolytic enzymes in an acidic environment (pH ~5) maintained by proton pumps. Key functions: ① AUTOPHAGY (recycling the cell\'s own damaged organelles). ② PHAGOCYTOSIS (destroying pathogens). ③ APOPTOSIS support. Enzyme leak → cell self-destruction. Enzyme failure → lysosomal storage diseases.',
 les:null},
-
+ 
 // ─────────────── PAGE 13 ───────────────
 {title:'ISSUE #8 — THE GREAT DNA DEBATE',ch:'Chapter 8: Gene Expression',
 grid:'pg-1',
@@ -828,7 +828,7 @@ panels:[
 ],
 sci:'THE CENTRAL DOGMA: DNA → (Transcription) → mRNA → (Translation) → Protein. Transcription: in the nucleus, RNA polymerase reads the DNA template strand and builds complementary mRNA. Translation: at the ribosome, mRNA codons are matched to tRNA anticodons, amino acids join in sequence. Both steps are essential — you can\'t skip either.',
 les:null},
-
+ 
 // ─────────────── PAGE 13 ───────────────
 {title:'ISSUE #9 — THE PLANT CELL PRIVILEGE DEBATE',ch:'Chapter 9: Plant vs Animal Cells',
 grid:'pg-big-l',
@@ -850,7 +850,7 @@ panels:[
     ${db('⚡','linear-gradient(135deg,#cc6600,#884400)','#ff880055','Mitochondria','...And I then burn that glucose for 36–38 ATP through THREE complex stages of respiration.','orange')}
     ${db('🌿','linear-gradient(135deg,#226600,#114400)','#44ff4455','Chloroplast','I grow the food. You burn the food. Perfect partnership.','green',true)}
     ${db('⚡','linear-gradient(135deg,#cc6600,#884400)','#ff880055','Mitochondria','...I grudgingly agree this is beautiful.','orange')}`},
-
+ 
   {cls:'pnl-blue',scene:`
     ${ss('10%','10%','3px','2.4s','.2s')}${ss('82%','18%','4px','3s','.8s')}${ss('50%','78%','2px','2.6s','1.3s')}
     ${pt('30%','55%','8px','#4488ff33','4s','0s')}
@@ -862,7 +862,7 @@ panels:[
 ],
 sci:'ANIMAL CELLS have: centrioles, flexible shape, small/many vacuoles, no cell wall, no chloroplasts. PLANT CELLS have: cell wall (cellulose), large central vacuole (up to 90% of volume!), chloroplasts, no centrioles. BOTH share: nucleus, mitochondria, ER, Golgi, ribosomes, cell membrane, lysosomes.',
 les:null},
-
+ 
 // ─────────────── PAGE 13 ───────────────
 {title:'ISSUE #10 — THE GREAT ATP SHORTAGE',ch:'Chapter 10: The Energy Crisis',
 grid:'pg-1',
@@ -896,7 +896,7 @@ panels:[
 ],
 sci:'ATP (Adenosine Triphosphate) is the universal energy currency. Every cell process needs it: muscle contraction, protein synthesis, membrane pumps, DNA repair, cell division. When glucose is low, the cell triage system activates — prioritising survival-critical processes. This is cooperative resource allocation at the molecular level.',
 les:'The cell teaches us something profound: when resources are scarce, cooperation — not competition — is what keeps the system alive. Every role matters. Every organelle is indispensable. This is true of cells, and equally true of human societies.'},
-
+ 
 // ─────────────── PAGE 13 ───────────────
 {title:'ISSUE #11 — APOPTOSIS: THE NOBLE FAREWELL',ch:'Chapter 11: Programmed Cell Death',
 grid:'pg-big-r',
@@ -913,8 +913,8 @@ panels:[
   dlg:`
     ${db('🧠','linear-gradient(135deg,#333355,#222233)','#8888ff44','Nucleus','My DNA damage is confirmed irreparable. p53 has evaluated the situation. The correct thing to do — for the safety of the entire organism — is to end myself. Cleanly. Calmly. Without harming my neighbours.','blue')}
     ${db('⚡','linear-gradient(135deg,#554433,#332211)','#88664444','Mitochondria','I release cytochrome c into the cytoplasm. This activates the caspase cascade. It is the death signal. It is... an honour to have served.','orange',true)}`},
-
-
+ 
+ 
   // right-column panel — p53 & caspase cascade visual
   {cls:'pnl-blue',scene:`
     ${ss('10%','8%','3px','2.8s','0s')}${ss('85%','15%','4px','3.2s','.6s')}${ss('50%','82%','2px','2.4s','1.2s')}
@@ -956,7 +956,7 @@ panels:[
 ],
 sci:'APOPTOSIS vs NECROSIS: Apoptosis = controlled, programmed — triggered by p53 detecting DNA damage, or external immune signals. Cell shrinks, chromatin condenses, caspase enzymes dismantle everything neatly into vesicles (apoptotic bodies). Phagocytes collect — no inflammation. Necrosis = accidental death — cell swells, bursts, releases contents → inflammation. Failure of apoptosis → CANCER.',
 les:'Lesson: Apoptosis is one of the most selfless acts in biology. A cell sacrifices itself — cleanly, quietly — so the organism it belongs to can survive. 50–70 billion such acts happen in your body every single day.'},
-
+ 
 // ─────────────── PAGE 13 ───────────────
 {title:'ISSUE #12 — THE BIG REVISION SPECIAL',ch:'Chapter 12: Exam Ready!',
 grid:'pg-big-l',
@@ -973,7 +973,7 @@ panels:[
     ${db('👧','linear-gradient(135deg,#cc8866,#aa6644)','#ffcc8844','Student','OK EVERYONE. Exam is tomorrow. I need quick answers. Please don\'t argue this time.','yellow')}
     ${db('🧠','linear-gradient(135deg,#6644cc,#4422aa)','#8855ff55','Nucleus','We have been preparing for this moment.','purple',true)}
     ${db('⚡','linear-gradient(135deg,#cc6600,#884400)','#ff880055','Mitochondria','We have ACTUALLY been waiting our entire lives for someone to ask us questions.','orange',true)}`},
-
+ 
   {cls:'pnl-purple span2',qa:true,scene:`
     ${ss('5%','5%','3px','2.5s','.2s')}${ss('92%','8%','4px','3.1s','.7s')}${ss('48%','88%','2px','2.2s','1.3s')}${ss('25%','78%','3px','2.8s','1s')}
     ${pt('10%','38%','8px','#8844ff33','4.5s','0s')}${pt('88%','55%','6px','#6644ff22','3.5s','.8s')}
@@ -990,7 +990,7 @@ panels:[
   ]},
 ],
 sci:null,les:null},
-
+ 
 
 // ─────────────── ISSUE 14 — QUIZ / EXPLORER ───────────────
 {title:'ISSUE #13 — EXPLORE THE CELL UNIVERSE!',ch:'Chapter 13: Explore & Discover',
