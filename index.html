@@ -1297,6 +1297,35 @@ function renderPage(idx){
             <strong>📚 PhD Societal Research Note</strong>
             This comic is part of a research project exploring how biology education can connect cellular science to social values — cooperation, equity, sacrifice, and the irreplaceable importance of every member of a community.
           </div>
+
+          <!-- Feedback Button -->
+          <div style="margin-top:32px;margin-bottom:8px">
+            <div style="font-size:13px;color:rgba(100,180,255,.65);margin-bottom:14px;letter-spacing:.5px;font-weight:700">
+              Enjoyed The Cell Society? Share your thoughts! 💬
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScOJmQILJpPRRyYFF4esQ2HkxQvgU5ptGbJBPCRQ_0d2V771g/viewform?usp=dialog"
+               target="_blank" rel="noopener noreferrer"
+               style="display:inline-block;text-decoration:none">
+              <button style="
+                font-family:'Bangers',cursive;letter-spacing:3px;font-size:clamp(16px,2.8vw,22px);
+                background:linear-gradient(135deg,#1144cc,#3366ff);
+                border:2.5px solid rgba(100,160,255,.6);
+                color:#fff;padding:16px 44px;border-radius:50px;
+                cursor:pointer;
+                box-shadow:0 0 36px rgba(51,102,255,.6),0 0 70px rgba(51,102,255,.25),0 0 110px rgba(51,102,255,.1);
+                animation:bPulse 2.5s ease-in-out infinite;
+                transition:transform .15s;
+              "
+              onmouseover="this.style.transform='scale(1.06)'"
+              onmouseout="this.style.transform='scale(1)'">
+                📝 SHARE YOUR FEEDBACK ↗
+              </button>
+            </a>
+            <div style="font-size:11px;color:rgba(255,255,255,.2);margin-top:12px;letter-spacing:.5px">
+              Opens Google Form in a new tab &nbsp;·&nbsp; Takes less than 2 minutes
+            </div>
+          </div>
+
         </div>
       </div>`;
     // add stars to final
